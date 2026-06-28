@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Flood Prediction Form</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>Monsoon Intensity</label>
+        <input type="number" name="MonsoonIntensity" required>
+
+        <label>Topography Drainage</label>
+        <input type="number" name="TopographyDrainage" required>
+
+        <label>River Management</label>
+        <input type="number" name="RiverManagement" required>
+
+        <label>Deforestation</label>
+        <input type="number" name="Deforestation" required>
+
+        <label>Urbanization</label>
+        <input type="number" name="Urbanization" required>
+
+        <label>Climate Change</label>
+        <input type="number" name="ClimateChange" required>
+
+        <label>Dams Quality</label>
+        <input type="number" name="DamsQuality" required>
+
+        <label>Siltation</label>
+        <input type="number" name="Siltation" required>
+
+        <label>Agricultural Practices</label>
+        <input type="number" name="AgriculturalPractices" required>
+
+        <label>Encroachments</label>
+        <input type="number" name="Encroachments" required>
+
+        <label>Ineffective Disaster Preparedness</label>
+        <input type="number" name="IneffectiveDisasterPreparedness" required>
+
+        <label>Drainage Systems</label>
+        <input type="number" name="DrainageSystems" required>
+
+        <label>Coastal Vulnerability</label>
+        <input type="number" name="CoastalVulnerability" required>
+
+        <label>Landslides</label>
+        <input type="number" name="Landslides" required>
+
+        <label>Watersheds</label>
+        <input type="number" name="Watersheds" required>
+
+        <label>Deteriorating Infrastructure</label>
+        <input type="number" name="DeterioratingInfrastructure" required>
+
+        <label>Population Score</label>
+        <input type="number" name="PopulationScore" required>
+
+        <label>Wetland Loss</label>
+        <input type="number" name="WetlandLoss" required>
+
+        <label>Inadequate Planning</label>
+        <input type="number" name="InadequatePlanning" required>
+
+        <label>Political Factors</label>
+        <input type="number" name="PoliticalFactors" required>
+
+        <label>ID</label>
+        <input type="number" name="id" required>
+
+        <br><br>
+
+        <button type="submit">
+            Predict Flood Risk
+        </button>
+
+    </form>
+
+</div>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
