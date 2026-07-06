@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f8fc;
+}
+
+/* ---------- NAVBAR ---------- */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b2d5c;
+    padding:18px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#4fc3f7;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    background:linear-gradient(rgba(11,45,92,.85),rgba(11,45,92,.85)),
+    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* ---------- SUMMARY ---------- */
+
+.summary{
+    padding:70px 8%;
+}
+
+.summary h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0b2d5c;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#1565c0;
+    font-size:34px;
+}
+
+/* ---------- GRAPHS ---------- */
+
+.graphs{
+    padding:70px 8%;
+}
+
+.graphs h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0b2d5c;
+}
+
+.graph-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:30px;
+}
+
+.graph-card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.graph-card h3{
+    text-align:center;
+    margin-bottom:15px;
+    color:#0b2d5c;
+}
+
+.graph-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ---------- TABLE ---------- */
+
+.performance{
+    padding:70px 8%;
+}
+
+.performance h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0b2d5c;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+th{
+    background:#1565c0;
+    color:white;
+    padding:18px;
+}
+
+td{
+    padding:16px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+/* ---------- WORKFLOW ---------- */
+
+.workflow{
+    padding:70px 8%;
+}
+
+.workflow h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0b2d5c;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#0b2d5c;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+nav{
+
+    flex-direction:column;
+
+}
+
+nav ul{
+
+    margin-top:15px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.graph-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}

@@ -1,30 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flood Alert</title>
+<html>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<head>
+
+    <title>Flood Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+
 </head>
+
 <body>
 
-<div class="container">
+<div class="result-container danger">
 
-    <h1 style="color:red;">⚠ High Flood Risk</h1>
+    <div class="icon">⚠️</div>
 
-    <h2>Flood is likely to occur.</h2>
+    <h1>High Flood Risk Detected</h1>
 
     <p>
-        Please inform the disaster management authorities and
-        take necessary precautions.
+
+        The Machine Learning model predicts a
+        <b>HIGH POSSIBILITY</b> of flooding based
+        on the environmental parameters.
+
     </p>
 
-    <a href="/predict">
-        <button>Check Again</button>
-    </a>
+    <div class="tips">
+
+        <h3>Safety Recommendations</h3>
+
+        <ul>
+
+            <li>Move to safer locations.</li>
+
+            <li>Follow weather alerts.</li>
+
+            <li>Avoid river banks.</li>
+
+            <li>Keep emergency kits ready.</li>
+
+            <li>Follow government instructions.</li>
+
+        </ul>
+
+    </div>
+
+    <div class="buttons">
+
+        <a href="/predict">
+
+            <button>Predict Again</button>
+
+        </a>
+
+        <a href="/">
+
+            <button class="home">
+
+                Home
+
+            </button>
+
+        </a>
+
+    </div>
 
 </div>
 
 </body>
+
 </html>

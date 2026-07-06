@@ -1,33 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flood Prediction System</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
+
 <body>
 
-<div class="container">
+    <!-- ================= NAVBAR ================= -->
 
-    <h1>🌊 Flood Prediction System</h1>
+    <nav>
 
-    <p>
-        Welcome to the Flood Prediction System.
-    </p>
+        <div class="logo">
+            🌊 Flood Prediction
+        </div>
 
-    <p>
-        This application predicts whether there is a risk of flooding
-        based on weather and environmental conditions using Machine
-        Learning (XGBoost).
-    </p>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict</a></li>
+            <li><a href="/history">History</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
 
-    <a href="/predict">
-        <button>Start Prediction</button>
-    </a>
+    </nav>
 
-</div>
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="overlay">
+
+            <h1>AI Powered Flood Prediction System</h1>
+
+            <p>
+                Predict flood risk using Artificial Intelligence,
+                Machine Learning and Environmental Factors.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/predict">
+                    <button class="predict-btn">
+                        Predict Flood Risk
+                    </button>
+                </a>
+
+                <a href="/history">
+                    <button class="history-btn">
+                        View History
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <h2>About The Project</h2>
+
+        <p>
+
+            This Flood Prediction System predicts flood risk using
+            Machine Learning algorithms trained on historical
+            environmental and geographical data.
+
+            The project is developed using Flask, Python,
+            Scikit-Learn and XGBoost.
+
+        </p>
+
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <h2>Project Features</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+
+                🤖
+
+                <h3>Machine Learning</h3>
+
+                <p>
+                    Decision Tree, Random Forest,
+                    KNN and XGBoost models.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                📊
+
+                <h3>Large Dataset</h3>
+
+                <p>
+                    Trained using more than
+                    one million records.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                ⚡
+
+                <h3>Fast Prediction</h3>
+
+                <p>
+                    Instant prediction using
+                    trained ML model.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                🌍
+
+                <h3>Environmental Factors</h3>
+
+                <p>
+                    Uses multiple environmental
+                    parameters for prediction.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ML MODELS ================= -->
+
+    <section id="models" class="models">
+
+        <h2>Machine Learning Models</h2>
+
+        <div class="model-container">
+
+            <div class="model-card">
+
+                <h3>Decision Tree</h3>
+
+                <p>Accuracy : 65.34%</p>
+
+            </div>
+
+            <div class="model-card">
+
+                <h3>Random Forest</h3>
+
+                <p>Accuracy : 79.87%</p>
+
+            </div>
+
+            <div class="model-card">
+
+                <h3>KNN</h3>
+
+                <p>Accuracy : 75.58%</p>
+
+            </div>
+
+            <div class="model-card">
+
+                <h3>XGBoost ⭐</h3>
+
+                <p>Accuracy : 81.66%</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECT WORKFLOW ================= -->
+
+    <section class="workflow">
+
+        <h2>Project Workflow</h2>
+
+        <div class="workflow-container">
+
+            <div class="workflow-card">
+
+                📂
+
+                <h3>Data Collection</h3>
+
+            </div>
+
+            <div class="workflow-card">
+
+                📊
+
+                <h3>Visualization</h3>
+
+            </div>
+
+            <div class="workflow-card">
+
+                ⚙
+
+                <h3>Preprocessing</h3>
+
+            </div>
+
+            <div class="workflow-card">
+
+                🤖
+
+                <h3>Model Building</h3>
+
+            </div>
+
+            <div class="workflow-card">
+
+                🌊
+
+                <h3>Prediction</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="stats">
+
+        <div class="stat">
+
+            <h2>1.1M+</h2>
+
+            <p>Dataset Records</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>4</h2>
+
+            <p>ML Models</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>81.66%</h2>
+
+            <p>Best Accuracy</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>XGBoost</h2>
+
+            <p>Selected Model</p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Flood Prediction System
+
+            <br>
+
+            Developed using Flask • XGBoost • Scikit-Learn • Machine Learning
+
+        </p>
+
+    </footer>
 
 </body>
+
 </html>

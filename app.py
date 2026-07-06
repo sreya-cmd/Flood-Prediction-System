@@ -16,7 +16,7 @@ def home():
     return render_template("home.html")
 
 
-# ---------------- INPUT PAGE ----------------
+# ---------------- PREDICT PAGE ----------------
 @app.route("/predict")
 def predict_page():
     return render_template("index.html")
@@ -27,39 +27,34 @@ def predict_page():
 def predict():
 
     data = [[
-        float(request.form["id"]),
         float(request.form["MonsoonIntensity"]),
         float(request.form["TopographyDrainage"]),
         float(request.form["RiverManagement"]),
-        float(request.form["Deforestation"]),
-        float(request.form["Urbanization"]),
         float(request.form["ClimateChange"]),
-        float(request.form["DamsQuality"]),
-        float(request.form["Siltation"]),
-        float(request.form["AgriculturalPractices"]),
-        float(request.form["Encroachments"]),
-        float(request.form["IneffectiveDisasterPreparedness"]),
-        float(request.form["DrainageSystems"]),
-        float(request.form["CoastalVulnerability"]),
-        float(request.form["Landslides"]),
-        float(request.form["Watersheds"]),
-        float(request.form["DeterioratingInfrastructure"]),
-        float(request.form["PopulationScore"]),
-        float(request.form["WetlandLoss"]),
-        float(request.form["InadequatePlanning"]),
-        float(request.form["PoliticalFactors"])
+        float(request.form["DrainageSystems"])
     ]]
 
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(
+        data,
+        columns=[
+            "MonsoonIntensity",
+            "TopographyDrainage",
+            "RiverManagement",
+            "ClimateChange",
+            "DrainageSystems"
+        ]
+    )
 
     scaled = scaler.transform(df)
 
     prediction = model.predict(scaled)[0]
 
-    if prediction == 1:
-        return redirect(url_for("chance"))
+    print("Predicted Flood Probability:", prediction)
 
-    return redirect(url_for("no_chance"))
+    if prediction >= 0.5:
+        return redirect(url_for("chance"))
+    else:
+        return redirect(url_for("no_chance"))
 
 
 # ---------------- RESULT PAGES ----------------
@@ -73,6 +68,12 @@ def no_chance():
     return render_template("no_chance.html")
 
 
-# ---------------- RUN APP ----------------
+# ---------------- HISTORY PAGE ----------------
+@app.route("/history")
+def history():
+    return render_template("history.html")
+
+
+# ---------------- RUN APPLICATION ----------------
 if __name__ == "__main__":
     app.run(debug=True)
